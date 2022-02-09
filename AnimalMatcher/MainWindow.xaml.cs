@@ -45,8 +45,14 @@ namespace AnimalMatcher
 
             foreach (TextBlock textBlock in mainGrid.Children.OfType<TextBlock>())
             {
-                
 
+                int index = rand.Next(animalEmoji.Count);
+
+                string nextEmojie = animalEmoji[index];
+
+                textBlock.Text = nextEmojie;
+
+                animalEmoji.RemoveAt(index);
 
             }
         }
